@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+:root {
+	/* Default to light mode */
+	--bg-dark: hsl(0 0% 90%);
+	--bg: hsl(0 0% 95%);
+	--bg-light: hsl(0 0% 100%);
+
+	--text: hsl(0 0% 5%);
+	--text-muted: hsl(0 0% 30%);
+
+	--action-bg: hsl(0 0% 90%);
+	--border-radius: 12px;
+
+	--bg-linear: linear-gradient(to bottom, #ecf8ff, #b8ddff);
+
+	--primary: hsl(176 39% 45%);
+	--secondary: hsl(176 39% 35%);
+
+	/* Transition for theme switching */
+	--transition: all 1s ease;
+
+	--card-bg: #ffffff;
+	--card-border: 1px solid rgba(0, 0, 0, 0.206);
+	--card-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+	--card-title: hsl(0 0% 10%);
+	--card-description: hsl(0 0% 35%);
+}
+
+* {
+	font-family: 'Nunito', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-optical-sizing: auto; /* optional, works for variable fonts */
+	font-weight: 600; /* set weight as 400, 600, or 700 */
+	font-style: normal;
+}
+
+.dark-theme {
+	--bg-dark: hsl(0 0% 0%);
+	--bg: hsl(0 0% 5%);
+	--bg-light: hsl(0 0% 15%);
+
+	--text: hsl(0 0% 95%);
+	--text-muted: hsl(0 0% 70%);
+
+	--action-bg: hsl(0 0% 10%);
+
+	--bg-linear: linear-gradient(to bottom, #111111, #222222);
+
+	--card-bg: #1c1c1c;
+	--card-border: 1px solid rgba(255, 255, 255, 0.08);
+	--card-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+	--card-title: hsl(0 0% 90%);
+	--card-description: hsl(0 0% 65%);
+}

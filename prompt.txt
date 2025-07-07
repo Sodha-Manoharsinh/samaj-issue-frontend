@@ -1,0 +1,10 @@
+1. landing page             --- done api--        ---design done--          --responsive done---
+2. signup                   --- done api--        ---design done--          --responsive done---
+3. login                    --- done api--        ---design done--          --responsive done---
+4. navbar                   --- done api--        ---design done--          --responsive done---
+5. profile - update         --- done api--        ---design done--          --responsive done---
+6. feed   (upvote button)   --- done api--        ---design done--          --responsive done---
+7. new issue-remaning       --- done api--        ---design done--          --responsive done---
+8. issue preview            --- done api--        ---design done--          --responsive done---
+9. about us                                       ---design remaining--
+10.admin
