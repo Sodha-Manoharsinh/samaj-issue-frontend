@@ -54,6 +54,19 @@
 			return;
 		}
 
+		if (password.length < 9) {
+			message = 'Password must be at least 9 characters.';
+			return;
+		}
+
+		// Allow only letters, numbers, and these special characters
+		const passwordRegex = /^[A-Za-z\d@$!%*?&]+$/;
+
+		if (!passwordRegex.test(password)) {
+			message = 'Password can only contain letters, numbers, and @ $ ! % * ? &.';
+			return;
+		}
+
 		try {
 			const formData = new FormData();
 			formData.append('email', email);

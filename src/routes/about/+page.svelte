@@ -101,7 +101,7 @@
 	.about-section {
 		padding: 3rem 2rem;
 		background: var(--bg-linear);
-		min-height: 100vh;
+		min-height: 100dvh;
 		color: var(--text);
 		display: flex;
 		flex-direction: column;

@@ -4,7 +4,7 @@
 </script>
 
 <Navbar />
-<section style="margin-top: 5rem;">
+<section style="margin-top: 5rem;" class="pb-5">
 	<slot />
 </section>
 <MobileNavbar />
