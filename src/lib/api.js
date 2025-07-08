@@ -3,7 +3,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-	baseURL: 'https://samaj-issue-backend.onrender.com/api' // 🔁 replace this
+	baseURL: 'https://web-production-11ec2.up.railway.app/api' // 🔁 replace this
 });
 
 // Add Authorization header if token exists in localStorage
