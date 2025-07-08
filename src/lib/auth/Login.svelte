@@ -6,6 +6,7 @@
 	let email = '';
 	let password = '';
 	let message = '';
+	let showPassword = false;
 
 	function isValidEmail(email) {
 		return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
@@ -58,7 +59,22 @@
 
 			<form on:submit|preventDefault={loginUser} class="d-flex flex-column gap-3">
 				<input type="email" class="form-control" placeholder="Email" bind:value={email} />
-				<input type="password" class="form-control" placeholder="Password" bind:value={password} />
+				<div class="input-group">
+					<input
+						type={showPassword ? 'text' : 'password'}
+						class="form-control"
+						placeholder="Password"
+						bind:value={password}
+					/>
+					<button
+						type="button"
+						class="btn btn-outline-secondary"
+						on:click={() => (showPassword = !showPassword)}
+						tabindex="-1"
+					>
+						{showPassword ? 'Hide' : 'Show'}
+					</button>
+				</div>
 				<button type="submit" class="btn btn-outline-primary">Log In</button>
 			</form>
 

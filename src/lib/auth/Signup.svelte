@@ -9,6 +9,7 @@
 	let step = 1;
 	let picture;
 	let message = '';
+	let showPassword = false;
 
 	function isValidEmail(email) {
 		return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
@@ -110,12 +111,23 @@
 					<button type="submit" class="btn btn-outline-primary">Send OTP</button>
 				{:else}
 					<input type="text" class="form-control" placeholder="Name" bind:value={name} />
-					<input
-						type="password"
-						class="form-control"
-						placeholder="Password"
-						bind:value={password}
-					/>
+					<div class="input-group">
+						<input
+							type={showPassword ? 'text' : 'password'}
+							class="form-control"
+							placeholder="Password"
+							bind:value={password}
+						/>
+						<button
+							type="button"
+							class="btn btn-outline-secondary"
+							on:click={() => (showPassword = !showPassword)}
+							tabindex="-1"
+						>
+							{showPassword ? 'Hide' : 'Show'}
+						</button>
+					</div>
+
 					<input type="text" class="form-control" placeholder="OTP Code" bind:value={code} />
 					<input
 						type="file"
