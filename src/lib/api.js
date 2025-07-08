@@ -1,29 +1,12 @@
 import axios from 'axios';
 
-const railwayURL = 'https://web-production-11ec2.up.railway.app/api';
-const renderURL = 'https://samaj-issue-backend.onrender.com/api';
+// const railwayURL = 'https://web-production-11ec2.up.railway.app/api';
+// const renderURL = 'https://samaj-issue-backend.onrender.com/api';
 
 const api = axios.create({
-	withCredentials: true // baseURL will be set dynamically
+	baseURL: 'https://web-production-11ec2.up.railway.app/api',
+	withCredentials: true
 });
-
-let setupPromise = null;
-
-// Only runs once — sets baseURL dynamically
-function setupBaseURL() {
-	if (setupPromise) return setupPromise;
-
-	setupPromise = axios
-		.get(`${railwayURL}/ping`)
-		.then(() => {
-			api.defaults.baseURL = railwayURL;
-		})
-		.catch(() => {
-			api.defaults.baseURL = renderURL;
-		});
-
-	return setupPromise;
-}
 
 // Optional: Add auth header interceptor
 api.interceptors.request.use((config) => {
@@ -33,7 +16,5 @@ api.interceptors.request.use((config) => {
 	}
 	return config;
 });
-
-await setupBaseURL(); // ⬅️ One-time setup before export
 
 export default api;
