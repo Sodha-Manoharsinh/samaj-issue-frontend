@@ -170,7 +170,7 @@
 
 	.logo-text {
 		color: var(--text);
-		font-size: 1.1rem;
+		font-size: 1.4rem;
 	}
 
 	@media (min-width: 768px) {

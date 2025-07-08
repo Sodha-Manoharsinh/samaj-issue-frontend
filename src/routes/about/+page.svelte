@@ -2,7 +2,13 @@
 	const team = [
 		{
 			name: 'Sodha Manoharsinh Chandubha',
-			role: 'Frontend, Backend, Database, API Testing, Deployment',
+			roles: [
+				{ role: 'Frontend', border: 'red' },
+				{ role: 'Backend', border: 'blue' },
+				{ role: 'Database', border: 'green' },
+				{ role: 'API Testing', border: 'gold' },
+				{ role: 'Deployment', border: 'purple' }
+			],
 			instagram: 'manoharsinhsodha',
 			linked_in: 'manoharsinh-sodha',
 			github: 'Sodha-Manoharsinh',
@@ -10,7 +16,13 @@
 		},
 		{
 			name: 'Todarmal Saumya',
-			role: 'Figma Design, Frontend, Frontend Testing, Documentation, Miro Board Design',
+			roles: [
+				{ role: 'Figma Design', border: 'orange' },
+				{ role: 'Frontend', border: 'deepskyblue' },
+				{ role: 'Frontend Testing', border: 'limegreen' },
+				{ role: 'Documentation', border: 'hotpink' },
+				{ role: 'Miro Board Design', border: 'cyan' }
+			],
 			instagram: 'kripler_01',
 			linked_in: null,
 			github: 'SnugBacon56',
@@ -32,7 +44,18 @@
 			<div class="card">
 				<img class="member-img" src={member.img} alt={member.name} />
 				<h3 class="member-name">{member.name}</h3>
-				<p class="member-role">{member.role}</p>
+				<div class="roles-container">
+					{#if member.roles}
+						{#each member.roles as r}
+							<span
+								class="role-pill"
+								style="border-color: {r.border}; box-shadow: 0 0 8px {r.border};"
+							>
+								{r.role}
+							</span>
+						{/each}
+					{/if}
+				</div>
 				<div class="social-links">
 					{#if member.instagram}
 						<a
@@ -152,11 +175,28 @@
 		text-align: center;
 	}
 
-	.member-role {
-		color: var(--card-description);
-		font-size: 0.9rem;
+	.roles-container {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 0.5rem;
 		margin-bottom: 0.75rem;
-		text-align: center;
+		margin-top: 1rem;
+	}
+
+	.role-pill {
+		padding: 0.35rem 0.7rem;
+		font-size: 0.85rem;
+		font-weight: 600;
+		border: 2px solid;
+		border-radius: 9999px;
+		color: var(--text);
+		background-color: var(--card-bg);
+		transition: transform 0.3s ease;
+	}
+
+	.role-pill:hover {
+		transform: scale(1.1);
 	}
 
 	.social-links {

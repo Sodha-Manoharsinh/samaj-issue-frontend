@@ -5,5 +5,7 @@
 </script>
 
 <Navbar />
-<LandingPage />
+<section class="pb-5">
+	<LandingPage />
+</section>
 <MobileNavbar />

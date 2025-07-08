@@ -185,7 +185,7 @@
 	.snap-wrapper {
 		scroll-snap-type: y mandatory;
 		overflow-y: scroll;
-		height: 100vh;
+		height: 92vh;
 		scroll-behavior: smooth;
 	}
 
@@ -203,7 +203,7 @@
 
 	.hero-img {
 		border-radius: var(--border-radius);
-		max-width: 100%;
+		max-width: 60%;
 		height: auto;
 		object-fit: cover;
 		box-shadow: var(--card-shadow);
@@ -327,12 +327,17 @@
 
 	.scroll-down {
 		position: absolute;
-		bottom: 20px;
+		bottom: 30px;
 		left: 50%;
 		transform: translateX(-50%);
 		font-size: 2rem;
 		color: var(--primary);
-		animation: bounce 2s infinite;
+		padding: 0px 20px;
+		border: 2px solid var(--primary);
+		border-radius: 70%;
+		box-shadow: 0px 0px 8px var(--primary);
+		animation: bounce 1.5s infinite;
+		z-index: 1;
 	}
 
 	@keyframes bounce {
@@ -358,6 +363,9 @@
 		}
 		.testimonial-author {
 			text-align: center !important;
+		}
+		.scroll-down {
+			bottom: 60px;
 		}
 	}
 </style>
