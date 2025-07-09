@@ -1,10 +1,10 @@
 import axios from 'axios';
 
-// const railwayURL = 'https://web-production-11ec2.up.railway.app/api';
-// const renderURL = 'https://samaj-issue-backend.onrender.com/api';
+// const BaseURL = 'https://web-production-11ec2.up.railway.app/api';
+const BaseURL = 'https://samaj-issue-backend.onrender.com/api';
 
 const api = axios.create({
-	baseURL: 'https://web-production-11ec2.up.railway.app/api',
+	baseURL: BaseURL,
 	withCredentials: true
 });
 
