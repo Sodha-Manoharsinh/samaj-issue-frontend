@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-// const BaseURL = 'https://web-production-11ec2.up.railway.app/api';
-const BaseURL = 'https://samaj-issue-backend.onrender.com/api';
+const BaseURL = 'https://web-production-11ec2.up.railway.app/api';
+// const BaseURL = 'https://samaj-issue-backend.onrender.com/api';
 
 const api = axios.create({
 	baseURL: BaseURL,
